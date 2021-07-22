@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#umpireIndicator {
+    width: 400px;
+    margin: auto;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.container {
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+h2 {
+    display: inline;
+}
+
+button {
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media screen and (max-width: 500px) {
+    
+    #umpireIndicator {
+        width: 80vw;
+    }
+
+}
