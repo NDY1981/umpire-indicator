@@ -1,41 +1,47 @@
-const strikes = document.querySelector('#strikes');
-const addStrike = document.querySelector('#addStrike');
-const balls = document.querySelector('#balls');
-const addBall = document.querySelector('#addBall');
-const outs = document.querySelector('#outs');
-const addOut = document.querySelector('#addOut');
+/* Scripting for the Umpire Indicator: */
 
-let strikeCount = 0;
-let ballCount = 0;
-let outCount = 0;
+const StrikesOutput = document.querySelector("#StrikesOutput");
+const StrikesButton = document.querySelector("#StrikesButton");
+const BallsOutput = document.querySelector("#BallsOutput");
+const BallsButton = document.querySelector("#BallsButton");
+const OutsOutput = document.querySelector("#OutsOutput");
+const OutsButton = document.querySelector("#OutsButton");
 
-strikes.textContent = strikeCount;
-balls.textContent = ballCount;
-outs.textContent = outCount;
+let StrikesCount = 0;
+let BallsCount = 0;
+let OutsCount = 0;
 
-addStrike.onclick = function() {
-    if (strikeCount === 3) {
-        strikeCount = 0;
-    } else {
-        strikeCount = strikeCount + 1;
-    }
-    strikes.textContent = strikeCount;
+StrikesOutput.textContent = StrikesCount;
+BallsOutput.textContent = BallsCount;
+OutsOutput.textContent = OutsCount;
+
+function AddStrikes() {
+	if (StrikesCount == 3) {
+		StrikesCount = 0;
+	} else {
+		StrikesCount = StrikesCount + 1;
+	}
+	StrikesOutput.textContent = StrikesCount;
 }
 
-addBall.onclick = function() {
-    if (ballCount === 4) {
-        ballCount = 0;
-    } else {
-        ballCount = ballCount + 1;
-    }
-    balls.textContent = ballCount;
+function AddBalls() {
+	if (BallsCount === 4) {
+		BallsCount = 0;
+	} else {
+		BallsCount = BallsCount + 1;
+	}
+	BallsOutput.textContent = BallsCount;
 }
 
-addOut.onclick = function() {
-    if (outCount === 3) {
-        outCount = 0;
-    } else {
-        outCount = outCount + 1;
-    }
-    outs.textContent = outCount;
+function AddOuts() {
+	if (OutsCount === 3) {
+		OutsCount = 0;
+	} else {
+		OutsCount = OutsCount + 1;
+	}
+	OutsOutput.textContent = OutsCount;
 }
+
+StrikesButton.addEventListener("click", AddStrikes);
+BallsButton.addEventListener("click", AddBalls);
+OutsButton.addEventListener("click", AddOuts);
