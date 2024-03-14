@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="Nathan Yoder">
-        <meta name="description" content="Umpire Indicator web app.">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="styles/style.css">
-        <script src="scripts/main.js" defer></script>
-        <title>Umpire Indicator</title>
-    </head>
-    <body>
-        <header>
-            <h1>Umpire Indicator</h1>
-        </header>
-        <main>
-            <div id="umpireIndicator">
-                <div class="container">
-                    <h2>Strikes: <h2 id="strikes"></h2></h2>
-                    <button id="addStrike">+</button>
-                </div>
-                <div class="container">
-                    <h2>Balls: <h2 id="balls"></h2></h2>
-                    <button id="addBall">+</button>
-                </div>
-                <div class="container">
-                    <h2>Outs: <h2 id="outs"></h2></h2>
-                    <button id="addOut">+</button>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <p>Designed and Developed by <a href="http://www.nathanyoderdev.com/" target="new">Nathan Yoder</a></p>
-        </footer>
-    </body>
+  <head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	  <meta name="author" content="Nathan Yoder">
+	  <meta name="description" content="Umpire Indicator web app.">
+	  <link rel="stylesheet" href="styles/style.css">
+	  <script defer src="scripts/main.js"></script>
+	  <title>Umpire Indicator</title>
+  </head>
+  <body>
+	  <main>
+		  <div id="UmpireIndicator"> <!-- The entire Umpire Indicator is in this div. -->
+			  <h1>Umpire Indicator</h1>
+			  <ul>
+				  <li>
+						<div>
+					    <label for="StrikesButton StrikesOutput">Strikes:</label>
+						  <output for="StrikesButton" id="StrikesOutput"></output>
+						</div>	
+						<button id="StrikesButton">+</button>
+				  </li>
+				  <li>
+						<div>
+					    <label for="BallsButton BallsOutput">Balls:</label>
+						  <output for="BallsButton" id="BallsOutput"></output>
+						</div>	
+						<button id="BallsButton">+</button>
+				  </li>
+				  <li>
+						<div>
+					    <label for="OutsButton OutsOutput">Outs:</label>
+						  <output for="OutsButton" id="OutsOutput"></output>
+						</div>
+						<button id="OutsButton">+</button>
+				  </li>
+			  </ul>
+		  </div>
+	  </main>
+	  <footer>
+		  <p>Designed and Developed by <a href="http://www.nathanyoderdev.com/" target="new">Nathan Yoder</a></p>
+	  </footer>
+  </body>
 </html>
